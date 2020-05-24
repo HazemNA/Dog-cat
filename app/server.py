@@ -82,7 +82,7 @@ classes = ['Abyssinian',
  'turkish_van',
  'wheaten_terrier',
  'yorkshire_terrier']
-## ['black', 'grizzly', 'teddys']
+
 path = Path(__file__).parent
 
 app = Starlette()
