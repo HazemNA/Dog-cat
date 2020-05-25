@@ -10,6 +10,7 @@ function showPicked(input) {
   reader.onload = function(e) {
     el("image-picked").src = e.target.result;
     el("image-picked").className = "";
+    el("result-label").innerHTML = `Click "Start Analysis" to figure our the breed`;
   };
   reader.readAsDataURL(input.files[0]);
 }
