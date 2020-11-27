@@ -20,6 +20,9 @@ function showPicked(input) {
 function analyze() {
   el("extradata-label").innerHTML = `analyze`;
   var uploadFiles = el("file-input").files;
+  // before size
+  var beforesize = input.files[0].size;
+  
   if (uploadFiles.length !== 1) alert("Please select a file to analyze!");
   
   el("analyze-button").innerHTML = "Analysis in Progress...";
@@ -44,6 +47,10 @@ function analyze() {
   };
 
   var fileData = new FormData();
+  // after size
+  var aftersize = uploadFiles[0].size;
+  el("extradata-label").innerHTML = `Before size is: ${beforesize} ...  After size is ${aftersize}`;
+  
   fileData.append("file", uploadFiles[0]);
   xhr.send(fileData);
 }
