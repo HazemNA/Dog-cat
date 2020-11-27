@@ -21,15 +21,19 @@ function analyze() {
   el("extradata-label").innerHTML = `analyze`;
   var uploadFiles = el("file-input").files;
   // before size
-  var beforesize = input.files[0].size;
+  var beforesize = el("file-input").files[0].size;
+  alert("before size");
+  alert(beforesize);
   
   if (uploadFiles.length !== 1) alert("Please select a file to analyze!");
   
   el("analyze-button").innerHTML = "Analysis in Progress...";
   el("result-label").innerHTML = `  `;
   
+  el("extradata-label").innerHTML = `b4 resize`;
   // resize image
   ResizeImage()
+   el("extradata-label").innerHTML = `after resize`;
   
   var xhr = new XMLHttpRequest();
   var loc = window.location;
@@ -49,7 +53,10 @@ function analyze() {
   var fileData = new FormData();
   // after size
   var aftersize = uploadFiles[0].size;
-  el("extradata-label").innerHTML = `Before size is: ${beforesize} ...  After size is ${aftersize}`;
+  //el("extradata-label").innerHTML = `Before size is: ${beforesize} ...  After size is ${aftersize}`;
+  
+    alert("after size");
+  alert(aftersize);
   
   fileData.append("file", uploadFiles[0]);
   xhr.send(fileData);
