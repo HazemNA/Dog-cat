@@ -52,11 +52,7 @@ function analyze() {
 
   var fileData = new FormData();
   // after size
-  var aftersize = uploadFiles[0].size;
-  //el("extradata-label").innerHTML = `Before size is: ${beforesize} ...  After size is ${aftersize}`;
-  
-    alert("after size");
-  alert(aftersize);
+  //var aftersize = uploadFiles[0].size;
   
   fileData.append("file", uploadFiles[0]);
   xhr.send(fileData);
