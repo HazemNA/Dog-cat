@@ -22,18 +22,19 @@ function analyze() {
   var uploadFiles = el("file-input").files;
   // before size
   var beforesize = el("file-input").files[0].size;
-  alert("before size");
-  alert(beforesize);
+  // next 2 lines will show the file size before resizing
+  //alert("before size");
+  //alert(beforesize);
   
   if (uploadFiles.length !== 1) alert("Please select a file to analyze!");
   
   el("analyze-button").innerHTML = "Analysis in Progress...";
   el("result-label").innerHTML = `  `;
   
-  el("extradata-label").innerHTML = `b4 resize`;
+  el("extradata-label").innerHTML = `before resize`;
   // resize image
-  ResizeImage()
-   el("extradata-label").innerHTML = `after resize`;
+  //ResizeImage()
+  //el("extradata-label").innerHTML = `after resize`;
   
   var xhr = new XMLHttpRequest();
   var loc = window.location;
@@ -58,6 +59,7 @@ function analyze() {
   xhr.send(fileData);
 }
 
+// the next function to resize the image. incomplete?
 function ResizeImage() {
     el("extradata-label").innerHTML = `ResizeImage`;
     // next 2 lines to take the uploaded filename
