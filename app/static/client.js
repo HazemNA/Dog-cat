@@ -18,7 +18,7 @@ function showPicked(input) {
 }
 
 function analyze() {
-  el("extradata-label").innerHTML = `analyze`;
+  el("extradata-label").innerHTML = `Analyze`;
   var uploadFiles = el("file-input").files;
   // before size
   var beforesize = el("file-input").files[0].size;
