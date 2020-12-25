@@ -31,7 +31,7 @@ function analyze() {
   el("analyze-button").innerHTML = "Analysis in Progress...";
   el("result-label").innerHTML = `  `;
   
-  el("extradata-label").innerHTML = `before resize`;
+  //el("extradata-label").innerHTML = `before resize`;
   // resize image
   //ResizeImage()
   //el("extradata-label").innerHTML = `after resize`;
